@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --color-text: #e67418;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(34, 34, 34);
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio {
+    display: flex;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.titulo {
+    font-size: 45px;
+    color: var(--color-text);
+    text-align: center;
+    padding-top: 30px;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.esquerda,
+.direita {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projeto {
+    max-width: 580px;
+    min-height: 390px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    padding: 30px 40px;
+    border-radius: 10px;
+
+    color: var(--color-text);
+    box-shadow: 0 0 10px rgba(243, 103, 103, 0.2);
+    border: 2px solid rgba(24, 122, 0, 0.2);
+}
+
+.projeto h1 {
+    font-size: 36px;
+    text-align: center;
+    margin: -10px;
+}
+
+.container {
+    width: 426px;
+    height: 240px;
+}
+
+.foto {
+    width: 426px;
+    height: 240px;
+}
+
+.foto {
+    width: 426px;
+    height: 240px;
+    margin: 15px;
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    transition: .3s;
+}
+
+.foto:hover {
+    background-image: var(--img-alt);
+}
+
+.projeto p {
+    text-align: center;
+    font-size: 16px;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
+    color: var(--color-text);
+    font-size: 20px;
+}
