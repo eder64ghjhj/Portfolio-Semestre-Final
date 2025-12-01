@@ -114,20 +114,39 @@ body {
 }
 
 
+/* ... seu código CSS anterior ... */
+
+/* Estilos Padrão para Telas Grandes (Desktop/Tablet) */
 .links ul {
-
     list-style: none;
-
+    padding: 0;
+    margin: 0;
+    
+    /* 1. MÁGICA: Divide em Duas Colunas (Os dois "blocos" que você quer) */
+    column-count: 2; 
+    column-gap: 20px; /* Espaço entre as duas colunas */
 }
-
-
 
 .links li {
-
     margin-bottom: 15px;
-
+    /* Garante que o item da lista não seja quebrado entre as colunas */
+    break-inside: avoid; 
 }
 
+/* ---------------------------------------------------- */
+/* 2. Responsividade: Volta para 1 Coluna em Telas Pequenas */
+/* ---------------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Quando a tela for menor que 768px (tamanho de tablet ou celular) */
+    .links ul {
+        /* Define a contagem de colunas para 1, voltando ao layout de lista única */
+        column-count: 1; 
+        column-gap: 0; /* Remove o espaço entre colunas */
+    }
+}
+
+/* ... restante do seu código CSS ... */
 
 
 .links a {
@@ -149,7 +168,18 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 
 }
+/* Anula o layout de múltiplas colunas SOMENTE para a página principal */
+.links-principal ul {
+    /* Define o número de colunas como 1, forçando o layout em linha única */
+    column-count: 1; 
+    /* Garante que o espaço entre colunas não atrapalhe */
+    column-gap: 0; 
+}
 
+/* Opcional: Garante que os itens preencham a largura total se necessário */
+.links-principal li {
+    break-inside: auto; /* Volta ao comportamento padrão */
+}
 
 
 .links a:hover {
